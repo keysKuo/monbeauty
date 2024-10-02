@@ -34,9 +34,9 @@ export default function Header() {
 						tabIndex={0}
 						className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
 					>
-						{navlinks.map((nav) => {
+						{navlinks.map((nav, idx) => {
 							return (
-								<li>
+								<li key={idx}>
 									<Link href={nav.url}>{nav.label}</Link>
 								</li>
 							);
@@ -54,9 +54,9 @@ export default function Header() {
 			</div>
 			<div className="navbar-center hidden lg:flex">
 				<ul className="menu menu-horizontal px-1">
-					{navlinks.map((nav) => {
+					{navlinks.map((nav, idx) => {
 						return (
-							<li className="mx-2 uppercase">
+							<li key={idx} className="mx-2 uppercase">
 								<Link href={nav.url}>{nav.label}</Link>
 							</li>
 						);

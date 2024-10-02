@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Heading from "./Heading";
 import Banner from "./Banner";
 
