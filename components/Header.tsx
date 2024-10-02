@@ -7,7 +7,7 @@ import { HiOutlineSearch  } from "react-icons/hi";
 export default function Header() {
 	return (
 		<header className="w-full bg-fourth">
-            <div className="navbar mx-auto text-zinc-700 h-24 p-0 ">
+            <div className="navbar mx-auto text-zinc-700 lg:h-24 h-20 p-0 ">
 			<div className="navbar-start">
 				<div className="dropdown">
 					<div
@@ -43,6 +43,8 @@ export default function Header() {
 						})}
 					</ul>
 				</div>
+				
+
 				<a className="lg:flex hidden rounded-full text-xl">
 					<Image
 						className="rounded-full"
@@ -52,8 +54,8 @@ export default function Header() {
 					/>
 				</a>
 			</div>
-			<div className="navbar-center hidden lg:flex">
-				<ul className="menu menu-horizontal px-1">
+			<div className="navbar-center">
+				<ul className="menu menu-horizontal px-1 hidden lg:flex">
 					{navlinks.map((nav, idx) => {
 						return (
 							<li key={idx} className="mx-2 uppercase">
@@ -62,6 +64,7 @@ export default function Header() {
 						);
 					})}
 				</ul>
+				<a className="lg:hidden flex uppercase font-marcellus cursor-pointer text-[1.25rem]"><strong className="text-red-400 mx-1">Mon</strong>  Beauty</a>
 			</div>
 			<div className="navbar-end">
 				<a className="mx-4"><HiOutlineSearch size={24}/></a>
