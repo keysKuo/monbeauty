@@ -8,6 +8,83 @@ body {
   font-family: var(--font-noto), sans-serif; 
 }
 
+.phone-ring {
+  animation: ring 1s infinite ease-in-out;
+}
+
+.fixed-contact::before {
+  content: '';
+  position: absolute;
+  height: 44px;
+  width: 60px;
+  box-shadow: 30px 0 0 0 #202020;
+  pointer-events: none;
+  top: -40px;
+  right: 3px;
+  border-radius: 0 0 50px 0;
+}
+
+.fixed-contact::after {
+  content: '';
+  position: absolute;
+  height: 44px;
+  width: 60px;
+  box-shadow: 30px 0 0 0 #202020;
+  pointer-events: none;
+  bottom: -40px;
+  right: 3px;
+  border-radius: 0 50px 0px 0;
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+  }
+
+  10% {
+    transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+  20% {
+    transform: rotate(25deg) scale(1) skew(1deg);
+  }
+  30% {
+    transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+  40% {
+    transform: rotate(25deg) scale(1) skew(1deg);
+  }
+  50% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+  }
+  100% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+  }
+}
+
+
+@keyframes shake {
+	10%,
+	90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+
+	20%,
+	80% {
+		transform: translate3d(2px, 0, 0);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+
+	40%,
+	60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
+
 
 @layer utilities {
   .text-balance {

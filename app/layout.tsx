@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Social from "@/components/Social";
 
 const NotoSans = localFont({
 	src: "./fonts/NotoSans-Medium.ttf",
@@ -31,6 +32,7 @@ export default function RootLayout({
 			<body
 				className={`${NotoSans.variable} ${Marcellus.variable} antialiased bg-fourth text-zinc-700`}
 			>
+				<Social />
 				<main className="xl:w-[70%] w-[90%] mx-auto">
 					<Header />
 					{children}
