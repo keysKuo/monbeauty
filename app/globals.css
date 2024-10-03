@@ -98,4 +98,8 @@ body {
   .font-marcellus {
     font-family: var(--font-marcellus), sans-serif;
   }
+
+  blockquote.tiktok-embed {
+    @apply bg-fourth;
+  }
 }
