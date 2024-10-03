@@ -1,11 +1,12 @@
 import Image from "next/image";
 import React from "react";
 import logo from "@/public/logo.jpg";
+import GoogleMap from "./GoogleMap";
 
 export default function Footer() {
 	return (
 		<section>
-			<footer className="footer bg-base-200 text-base-content p-10 text-center">
+			<footer className="footer lg:max-h-[400px] bg-base-200 text-base-content p-10 text-center">
 				<nav>
 					{/* <Image className="w-36 rounded-full mb-5" src={logo} alt="logo"/> */}
 					<div className="lg:w-[30vw]">
@@ -42,9 +43,10 @@ export default function Footer() {
 					<a className="link link-hover">8:00 - 21:00</a>
 				</nav>
 
-				<div>
-					<Image className="w-48" src={logo} alt="map" />
-				</div>
+				<nav>
+					{/* <Image className="w-48" src={logo} alt="map" /> */}
+                    <GoogleMap />
+				</nav>
 			</footer>
 			<footer className="footer footer-center bg-base-300 text-base-content p-4">
 				<aside>

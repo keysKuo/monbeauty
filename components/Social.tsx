@@ -7,7 +7,7 @@ export default function Social() {
 	return (
 		<div
 			className="fixed-contact flex flex-col items-center justify-center
-        bg-[#202020] fixed z-[1000] right-[-4px] top-[80%] translate-y-[-50%]
+        bg-[#202020] fixed z-[1000] right-[-4px] top-[75%] translate-y-[-50%]
         transition-all duration-300 rounded-l-[30px] px-2 py-4"
 		>
 			<Link
