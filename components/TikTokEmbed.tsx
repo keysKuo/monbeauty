@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-
 interface TikTokEmbedProps {
     videoUrl: string;
 }
@@ -36,7 +35,7 @@ const TikTokEmbed: React.FC<TikTokEmbedProps> = ({ videoUrl }) => {
     return (
         <blockquote
             ref={blockquoteRef}
-            className="tiktok-embed"
+            className="tiktok-embed mx-0"
             cite={videoUrl}
             data-video-id={videoUrl.split('/').pop()}
             style={{ maxWidth: '325px', minWidth: '325px' }}>
