@@ -12,6 +12,7 @@ body {
   animation: ring 1s infinite ease-in-out;
 }
 
+
 .fixed-contact::before {
   content: '';
   position: absolute;
@@ -102,4 +103,9 @@ body {
   blockquote.tiktok-embed {
     @apply bg-fourth;
   }
+
+  .tiktok-embed {
+    @apply drop-shadow-xl shadow-lg border border-zinc-300
+  }
+
 }

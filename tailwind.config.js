@@ -14,7 +14,7 @@ module.exports = {
 				primary: "#B4B4B8", // Add your custom base color here
 				secondary: "#C7C8CC",
 				third: "#E3E1D9",
-				fourth: "#F2EFE5",
+				fourth: "#f2eff2",
 			},
 		},
 	},

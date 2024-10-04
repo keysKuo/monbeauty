@@ -23,7 +23,7 @@ export default function Social() {
                 className="w-[36px] h-[36px] leading-[36px] rounded-[30px]
             bg-[#202020] relative my-1 flex items-center justify-center text-[#ccc]
             hover:text-[#9F33FF] hover:translate-y-[-4px] transition-all duration-300 ease"
-                href="https://m.me/101213069498192"
+                href="https://m.me/352777214589068"
                 target="_blank"
             >
                 <RiMessengerLine size="25" />
@@ -32,7 +32,7 @@ export default function Social() {
                 className="w-[36px] h-[36px] leading-[36px] rounded-[30px]
             bg-[#202020] relative my-1 flex items-center justify-center text-[#ccc]
             hover:text-[#5FBDFF] hover:translate-y-[-4px] transition-all duration-300 ease"
-                href="#"
+                href="https://zalo.me/0909402710"
                 target="_blank"
             >
                 <SiZalo size="25" />
@@ -41,7 +41,7 @@ export default function Social() {
                 className="w-[36px] h-[36px] leading-[36px] rounded-[30px]
           bg-[#202020] relative my-1 flex items-center justify-center text-[#ccc]
           hover:text-[#FF304F] hover:translate-y-[-4px] transition-all duration-300 ease"
-                href="#"
+                href="https://www.tiktok.com/@monbeauty1412"
                 target="_blank"
             >
                 <SiTiktok size="20" />

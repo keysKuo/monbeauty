@@ -12,7 +12,7 @@ export default function Popular() {
     return (
         <section className="w-full">
             <Fragment>
-                <Heading title={"Nổi bật"} />
+                <Heading title={"Sản phẩm"} />
 
                 <div className="flex flex-row gap-3 my-10">
                     <div className="w-[33%] flex flex-col gap-3">
