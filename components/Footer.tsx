@@ -48,15 +48,15 @@ export default function Footer() {
                             </p>
                             <div className="flex flex-col items-start justify-center gap-2 my-6" >
                                 <div className="flex items-center gap-2">
-                                    <HiLocationMarker />
-                                    <p>108/6 Lê Tự Tài, P4, Q.Phú Nhuận, Hồ Chí Minh</p>
+                                    <HiLocationMarker size={20} />
+                                    <p className="truncate">108/6 Lê Tự Tài, P4, Q.Phú Nhuận, Hồ Chí Minh</p>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <HiPhone />
+                                    <HiPhone size={20} />
                                     <p>0909402710</p>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <HiEnvelope />
+                                    <HiEnvelope size={20} />
                                     <p>monbeauty@gmail.com</p>
                                 </div>
                             </div>
