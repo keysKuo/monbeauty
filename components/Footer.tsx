@@ -1,6 +1,5 @@
 import React from "react";
 import GoogleMap from "./GoogleMap";
-import Link from "next/link";
 import { HiLocationMarker, HiPhone } from "react-icons/hi";
 import { HiEnvelope } from "react-icons/hi2";
 
