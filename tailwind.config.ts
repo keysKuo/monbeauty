@@ -12,6 +12,15 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      boxShadow: {
+        card: '0px 1px 2px 0px rgba(0, 0, 0, 0.05)'
+      },
+      screens: {
+        desktop: '1440px',
+        laptop: '1080px',
+        tablet: '720px',
+        mobile: '400px'
+      },
     },
   },
   plugins: [],

@@ -17,22 +17,22 @@ export default function Services() {
 
             <Heading title="Dịch vụ" />
             <div className="w-full py-6">
-                <div className="flex items-center justify-center gap-3">
-                    <div className="w-[33%] px-3 flex flex-col items-center justify-center text-center">
+                <div className="flex tablet:flex-row flex-col items-center justify-center gap-3">
+                    <div className="tablet:w-[33%] w-[85%] px-3 flex flex-col items-center justify-center text-center">
                         <div className="w-[50px] h-[50px] rounded-full border border-zinc-700">
                             <Image src={service1} alt="service1" />
                         </div>
                         <p className="uppercase text-[1.25rem] py-4">DỊCH VỤ CHĂM SÓC MÓNG</p>
                         <p className="text-sm">Đây là dịch vụ phổ biến mà bất cứ tiệm nail nào cũng có trong không gian vui vẻ và ấm cúng.</p>
                     </div>
-                    <div className="border-r border-l border-zinc-400 h-[250px] w-[33%] px-3 flex flex-col items-center justify-center text-center">
+                    <div className="tablet:border-r tablet:border-l border-zinc-400 h-[250px] tablet:w-[33%] w-[85%] px-3 flex flex-col items-center justify-center text-center">
                         <div className="w-[50px] h-[50px] rounded-full border border-zinc-700">
                             <Image src={service2} alt="service1" />
                         </div>
                         <p className="uppercase text-[1.25rem] py-4">DỊCH VỤ DESIGN MÓNG</p>
                         <p className="text-sm">Hãy đến và trải nghiệm dịch vụ sơn, vẽ móng tay chân tại Mon Beauty để cảm nhận sự khác biệt.</p>
                     </div>
-                    <div className="w-[33%] px-3 flex flex-col items-center justify-center text-center">
+                    <div className="tablet:w-[33%] w-[85%] px-3 flex flex-col items-center justify-center text-center">
                         <div className="w-[50px] h-[50px] rounded-full border border-zinc-700">
                             <Image src={service3} alt="service1" />
                         </div>

@@ -1,11 +1,13 @@
 import React from "react";
 import GoogleMap from "./GoogleMap";
 import Link from "next/link";
+import { HiLocationMarker, HiPhone } from "react-icons/hi";
+import { HiEnvelope } from "react-icons/hi2";
 
 export default function Footer() {
     return (
         <section>
-            <div className="w-full h-[300px] bg-zinc-700 flex items-center justify-center">
+            {/* <div className="w-full h-[300px] bg-zinc-700 flex items-center justify-center">
                 <div className="w-[65%] mx-auto py-10 relative">
                     <h1 className="text-[2rem] uppercase text-white py-2">Vì sao nên chọn Mon Beauty</h1>
                     <li className="text-white py-2 text-lg">Cam kết bảo hành miễn phí trong mọi trường hợp</li>
@@ -15,18 +17,17 @@ export default function Footer() {
                     <Link
                         href="https://zalo.me/0909402710"
                         target="_blank"
-                        className="xl:flex hidden text-center py-2 px-10 text-[1.6rem] text-white border-4 border-white absolute right-14 top-[40%] hover:bg-zinc-800">
+                        className="desktop:flex hidden text-center py-2 px-10 text-[1.6rem] text-white border-4 border-white absolute right-14 top-[40%] hover:bg-zinc-800">
                         Liên hệ đặt lịch
                     </Link>
                 </div>
+            </div> */}
 
-
-            </div>
             <div className="w-full bg-base-200">
-                <footer className="footer xl:w-[65%] w-full mx-auto lg:max-h-[400px] bg-base-200 text-base-content py-10 xl:px-0 px-10 text-center">
+                <footer className="footer desktop:w-[65%] w-full mx-auto laptop:max-h-[400px] bg-base-200 text-base-content py-10 desktop:px-0 px-10 text-center">
                     <nav>
                         {/* <Image className="w-36 rounded-full mb-5" src={logo} alt="logo"/> */}
-                        <div className="max-w-[20vw]">
+                        <div className="laptop:max-w-[25vw] w-full">
                             <span className="font-marcellus text-red-400 uppercase text-[2.7rem]">
                                 MON
                             </span>
@@ -45,6 +46,20 @@ export default function Footer() {
                                 </span>
                                 . Rất hân hạnh vì được phục vụ cho quý khách...
                             </p>
+                            <div className="flex flex-col items-start justify-center gap-2 my-6" >
+                                <div className="flex items-center gap-2">
+                                    <HiLocationMarker />
+                                    <p>108/6 Lê Tự Tài, P4, Q.Phú Nhuận, Hồ Chí Minh</p>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <HiPhone />
+                                    <p>0909402710</p>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <HiEnvelope />
+                                    <p>monbeauty@gmail.com</p>
+                                </div>
+                            </div>
                         </div>
                     </nav>
                     <nav>

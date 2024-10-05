@@ -9,21 +9,21 @@ import logo from "@/public/logo.jpg";
 
 export default function Introduce() {
     return (
-        <section className="container mx-auto lg:py-20 py-10">
-            <div className="flex lg:flex-row flex-col-reverse gap-3">
-                <div className="lg:w-[30%] w-full mr-5 lg:text-start text-center">
-                    <h2 className="xl:text-[5rem] text-[3.7rem] mb-[-30px] uppercase font-marcellus">
+        <section className="container mx-auto laptop:py-20 py-10">
+            <div className="flex laptop:flex-row flex-col-reverse gap-3">
+                <div className="laptop:w-[30%] w-full mr-5 laptop:text-start text-center">
+                    <h2 className="desktop:text-[5rem] text-[3.7rem] mb-[-30px] uppercase font-marcellus">
                         Beauty
                     </h2>
-                    <p className="xl:text-[5rem] text-[3.7rem] uppercase font-marcellus">
+                    <p className="desktop:text-[5rem] text-[3.7rem] uppercase font-marcellus">
                         & Nail
                     </p>
-                    <span className="text-red-400 xl:text-[1.5rem] text-[1.25rem] uppercase">Mon</span>{" "}
-                    <span className="xl:text-[1.5rem] text-[1.25rem] uppercase">
+                    <span className="text-red-400 desktop:text-[1.5rem] text-[1.25rem] uppercase">Mon</span>{" "}
+                    <span className="desktop:text-[1.5rem] text-[1.25rem] uppercase">
                         Beauty Studio
                     </span>
 
-                    <p className="xl:mt-14 mt-8 xl:text-base text-sm text-zinc-500">
+                    <p className="desktop:mt-14 mt-8 desktop:text-base text-sm text-zinc-500">
                         Beautiful salon in SaiGon with high quality services and
                         warm atmosphere.
                     </p>
@@ -32,7 +32,7 @@ export default function Introduce() {
                         <span>Book lịch hẹn</span>
                     </button>
                 </div>
-                <div className="lg:w-[70%] w-full mr-5 flex gap-3">
+                <div className="laptop:w-[70%] w-full mr-5 flex gap-3">
                     <div className="w-[40%]">
                         <Image
                             className="drop-shadow-md rounded-md shadow-lg hover:scale-[1.03] transition-all duration-300"
