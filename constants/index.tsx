@@ -34,3 +34,4 @@ export const navlinks: NavLink[] = [
 	},
 ];
 
+export const API_URL = 'https://admin.monbeauty.org'

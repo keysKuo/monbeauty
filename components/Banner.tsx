@@ -2,11 +2,16 @@
 
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
-import banner1 from "@/public/banner1.png";
-import banner2 from "@/public/banner2.png";
-import banner3 from "@/public/banner3.png";
+import { API_URL } from "@/constants";
 
-export default function Banner() {
+type BannerProps = {
+    photo: {
+        url: string,
+        id: string
+    },
+}
+
+export default function Banner({ images }: { images: BannerProps[] }) {
     const carouselRef = useRef<HTMLDivElement | null>(null); // Typed reference for the carousel container
     const intervalRef = useRef<number | null>(null); // Correct type for the browser environment
     const items = [1, 2, 3]; // Carousel item numbers
@@ -40,15 +45,11 @@ export default function Banner() {
     return (
         <section className="w-full">
             <div ref={carouselRef} className="carousel w-full flex overflow-x-scroll snap-x">
-                <div className="carousel-item w-full flex-shrink-0 snap-start">
-                    <Image className="w-full" src={banner1} alt="banner 1" />
-                </div>
-                <div className="carousel-item w-full flex-shrink-0 snap-start">
-                    <Image className="w-full" src={banner2} alt="banner 2" />
-                </div>
-                <div className="carousel-item w-full flex-shrink-0 snap-start">
-                    <Image className="w-full" src={banner3} alt="banner 3" />
-                </div>
+                {images?.map(img => {
+                    return <div key={img.photo.id} className="carousel-item w-full flex-shrink-0 snap-start">
+                        <Image className="w-full" src={API_URL + img.photo.url} width={1920} height={1080} alt={img.photo.id} />
+                    </div>
+                })}
             </div>
         </section>
     );
