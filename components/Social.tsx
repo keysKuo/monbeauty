@@ -1,9 +1,13 @@
+'use client';
+
 import Link from "next/link";
+import { HiGiftTop } from "react-icons/hi2";
 import { LuPhoneCall } from "react-icons/lu";
 import { RiMessengerLine } from "react-icons/ri";
 import { SiZalo, SiTiktok } from "react-icons/si";
 
 export default function Social() {
+
     return (
         <div
             className="fixed-contact flex flex-col items-center justify-center
@@ -46,6 +50,19 @@ export default function Social() {
             >
                 <SiTiktok size="20" />
             </Link>
+            <div
+                className="w-[36px] h-[36px] leading-[36px] rounded-[30px]
+          bg-[#202020] relative my-1 flex items-center justify-center text-[#ccc]
+          hover:text-[#FFB0B0] hover:translate-y-[-4px] transition-all duration-300 ease"
+                onClick={() => {
+                    const redeemForm = document.getElementById('redeem-form') as HTMLDialogElement | null;
+                    if (redeemForm) {
+                        redeemForm.showModal();
+                    }
+                }}
+            >
+                <HiGiftTop size="20" />
+            </div>
         </div>
     );
 }

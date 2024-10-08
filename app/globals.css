@@ -86,6 +86,12 @@ body {
 	}
 }
 
+input::placeholder {
+    color: black; /* Màu của placeholder */
+    opacity: .7;
+    font-size: 0.9rem /* Đảm bảo màu sắc không bị mờ */
+}
+
 
 @layer utilities {
   .text-balance {

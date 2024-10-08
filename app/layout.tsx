@@ -4,6 +4,9 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Social from "@/components/Social";
+import Form from "@/components/Form";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const NotoSans = localFont({
     src: "./fonts/NotoSans-Medium.ttf",
@@ -33,10 +36,12 @@ export default function RootLayout({
                 className={`${NotoSans.variable} ${Marcellus.variable} antialiased bg-fourth text-zinc-700`}
             >
                 <Social />
+                <Form />
                 <main className="desktop:w-[70%] w-[90%] mx-auto">
                     <Header />
                     {children}
                 </main>
+                <ToastContainer hideProgressBar />
                 <Footer />
             </body>
         </html>
