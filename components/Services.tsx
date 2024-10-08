@@ -8,10 +8,10 @@ import service2 from '@/public/manicure.png';
 import service3 from '@/public/therapy.png';
 
 export default async function Services() {
-    const banners = await fetch('https://admin.monbeauty.org/api/banners?sort[0]=order:asc&filters[display][$eq]=true&populate[photo][fields][0]=url')
+    const banners = await fetch('https://admin.monbeauty.org/api/banners?sort[0]=order:asc&filters[display][$eq]=true&populate[photo][fields][0]=url', { cache: 'no-store' })
         .then(response => response.json())
-        .then(result =>  result.data)
-        
+        .then(result => result.data)
+
     return (
         <section className="w-full mb-16">
             <Heading title="Nổi bật" />

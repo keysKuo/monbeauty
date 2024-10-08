@@ -9,7 +9,7 @@ type VideoProps = {
 }
 
 export default async function Videos() {
-    const videos: VideoProps[] = await fetch(API_URL + "/api/videos")
+    const videos: VideoProps[] = await fetch(API_URL + "/api/videos", { cache: 'no-store' })
         .then(response => response.json())
         .then(result => result.data);
 
