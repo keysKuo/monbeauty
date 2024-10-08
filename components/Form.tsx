@@ -63,6 +63,7 @@ export default function Form() {
                 toast('❌ Mã khuyến mãi không hợp lệ');
             }
         } catch (error) {
+            console.log(error);
             toast('❌ Xãy ra lỗi từ hệ thống');
         }
         finally {
