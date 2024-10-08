@@ -16,7 +16,7 @@ export default async function Videos() {
     return (
         <section className='w-full my-16'>
             <Heading title='TikTok Videos' />
-            <div className="grid desktop:grid-cols-4 laptop:grid-cols-3 tablet:grid-cols-2 grid-cols-1 gap-5">
+            <div className="grid tablet:grid-cols-3 grid-cols-1 gap-0">
                 {videos?.map(video => {
                     return <TikTokEmbed key={video.id} videoUrl={video.url} />
                 })}
