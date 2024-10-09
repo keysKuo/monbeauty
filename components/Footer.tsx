@@ -1,27 +1,16 @@
+'use client';
+
 import React from "react";
 import GoogleMap from "./GoogleMap";
 import { HiLocationMarker, HiPhone } from "react-icons/hi";
 import { HiEnvelope } from "react-icons/hi2";
+import { useWebConfigContext } from "@/providers/WebConfigProvider";
 
 export default function Footer() {
+    const config = useWebConfigContext();
+
     return (
         <section>
-            {/* <div className="w-full h-[300px] bg-zinc-700 flex items-center justify-center">
-                <div className="w-[65%] mx-auto py-10 relative">
-                    <h1 className="text-[2rem] uppercase text-white py-2">Vì sao nên chọn Mon Beauty</h1>
-                    <li className="text-white py-2 text-lg">Cam kết bảo hành miễn phí trong mọi trường hợp</li>
-                    <li className="text-white py-2 text-lg">Không gian sang trọng, yên tĩnh,sạch sẽ</li>
-                    <li className="text-white py-2 text-lg">Cập nhật mẫu nail và công nghệ mới</li>
-
-                    <Link
-                        href="https://zalo.me/0909402710"
-                        target="_blank"
-                        className="desktop:flex hidden text-center py-2 px-10 text-[1.6rem] text-white border-4 border-white absolute right-14 top-[40%] hover:bg-zinc-800">
-                        Liên hệ đặt lịch
-                    </Link>
-                </div>
-            </div> */}
-
             <div className="w-full bg-base-200">
                 <footer className="footer desktop:w-[65%] w-full mx-auto laptop:max-h-[400px] bg-base-200 text-base-content py-10 desktop:px-0 px-10 text-center">
                     <nav>
@@ -48,15 +37,15 @@ export default function Footer() {
                             <div className="flex flex-col items-start justify-center gap-2 my-6" >
                                 <div className="flex items-center gap-2">
                                     <HiLocationMarker size={20} />
-                                    <p className="truncate">108/6 Lê Tự Tài, P4, Q.Phú Nhuận, Hồ Chí Minh</p>
+                                    <p className="truncate">{config.address}</p>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <HiPhone size={20} />
-                                    <p>0909402710</p>
+                                    <p>{config.phone}</p>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <HiEnvelope size={20} />
-                                    <p>monbeauty@gmail.com</p>
+                                    <p>{config.email}</p>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +60,7 @@ export default function Footer() {
                     <nav>
                         <h6 className="footer-title">Giờ hoạt động</h6>
                         <a className="link link-hover">Thứ 2 - Chủ nhật</a>
-                        <a className="link link-hover">9:00 - 21:00</a>
+                        <a className="link link-hover">{config.working_hours}</a>
                     </nav>
 
                     <nav>
@@ -85,7 +74,7 @@ export default function Footer() {
                 <aside>
                     <p>
                         Copyright © {new Date().getFullYear()} - All right
-                        reserved by SUD Technology Ltd
+                        reserved by SUD Technology
                     </p>
                 </aside>
             </footer>

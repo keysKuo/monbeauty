@@ -1,5 +1,6 @@
 'use client';
 
+import { useWebConfigContext } from "@/providers/WebConfigProvider";
 import Link from "next/link";
 import { HiGiftTop } from "react-icons/hi2";
 import { LuPhoneCall } from "react-icons/lu";
@@ -7,6 +8,7 @@ import { RiMessengerLine } from "react-icons/ri";
 import { SiZalo, SiTiktok } from "react-icons/si";
 
 export default function Social() {
+    const config = useWebConfigContext();
 
     return (
         <div
@@ -18,7 +20,7 @@ export default function Social() {
                 className="phone-ring w-[36px] h-[36px] leading-[36px] rounded-[30px]
             bg-[#202020] relative my-1 flex items-center justify-center text-[#71B190]
             hover:text-[#71B190]"
-                href="tel:0909402710"
+                href={`tel:${config.phone}`}
                 target="_blank"
             >
                 <LuPhoneCall size="23" />
@@ -27,7 +29,7 @@ export default function Social() {
                 className="w-[36px] h-[36px] leading-[36px] rounded-[30px]
             bg-[#202020] relative my-1 flex items-center justify-center text-[#ccc]
             hover:text-[#9F33FF] hover:translate-y-[-4px] transition-all duration-300 ease"
-                href="https://m.me/352777214589068"
+                href={config.messenger_url}
                 target="_blank"
             >
                 <RiMessengerLine size="25" />
@@ -36,7 +38,7 @@ export default function Social() {
                 className="w-[36px] h-[36px] leading-[36px] rounded-[30px]
             bg-[#202020] relative my-1 flex items-center justify-center text-[#ccc]
             hover:text-[#5FBDFF] hover:translate-y-[-4px] transition-all duration-300 ease"
-                href="https://zalo.me/0909402710"
+                href={config.zalo_url}
                 target="_blank"
             >
                 <SiZalo size="25" />
@@ -45,7 +47,7 @@ export default function Social() {
                 className="w-[36px] h-[36px] leading-[36px] rounded-[30px]
           bg-[#202020] relative my-1 flex items-center justify-center text-[#ccc]
           hover:text-[#FF304F] hover:translate-y-[-4px] transition-all duration-300 ease"
-                href="https://www.tiktok.com/@monbeauty1412"
+                href={config.tiktok_url}
                 target="_blank"
             >
                 <SiTiktok size="20" />

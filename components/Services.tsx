@@ -6,9 +6,10 @@ import Image from 'next/image';
 import service1 from '@/public/nail-file.png';
 import service2 from '@/public/manicure.png';
 import service3 from '@/public/therapy.png';
+import { API_URL } from "@/constants";
 
 export default async function Services() {
-    const banners = await fetch('https://admin.monbeauty.org/api/banners?sort[0]=order:asc&filters[display][$eq]=true&populate[photo][fields][0]=url', { cache: 'no-store' })
+    const banners = await fetch(API_URL + '/api/banners?sort[0]=order:asc&filters[display][$eq]=true&populate[photo][fields][0]=url', { cache: 'no-store' })
         .then(response => response.json())
         .then(result => result.data)
 
