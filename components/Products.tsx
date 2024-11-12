@@ -7,11 +7,22 @@ import nailImg3 from "@/public/service7.jpg";
 import nailImg4 from "@/public/service10.jpg";
 import nailImg5 from "@/public/service6.jpg";
 import nailImg6 from "@/public/service1.jpg";
+import Banner from "./Banner";
+import { API_URL } from "@/constants";
 
-export default function Popular() {
+export default async function Products() {
+    const banners = await fetch(API_URL + '/api/banners?sort[0]=order:asc&filters[display][$eq]=true&populate[photo][fields][0]=url', { cache: 'no-store' })
+        .then(response => response.json())
+        .then(result => result.data)
+
     return (
         <section className="w-full">
             <Fragment>
+                <Heading title="Nổi bật" />
+                <div className="w-full bg-secondary mb-20">
+                    <Banner images={banners || ""} />
+                </div>
+
                 <Heading title={"Sản phẩm"} />
 
                 <div className="flex flex-row gap-3 my-10">

@@ -9,13 +9,15 @@ type BannerProps = {
         url: string,
         id: string
     },
+    width: number | 1920,
+    height: number | 1080
 }
 
 export default function Banner({ images }: { images: BannerProps[] }) {
     const carouselRef = useRef<HTMLDivElement | null>(null); // Typed reference for the carousel container
     const intervalRef = useRef<number | null>(null); // Correct type for the browser environment
     const items = [1, 2, 3]; // Carousel item numbers
-    const autoScrollInterval = 2000; // Time interval for auto-scroll (in milliseconds)
+    const autoScrollInterval = 3000; // Time interval for auto-scroll (in milliseconds)
 
     useEffect(() => {
         let currentIndex = 0;
@@ -47,7 +49,7 @@ export default function Banner({ images }: { images: BannerProps[] }) {
             <div ref={carouselRef} className="carousel w-full flex overflow-x-scroll snap-x">
                 {images?.map(img => {
                     return <div key={img.photo.id} className="carousel-item w-full flex-shrink-0 snap-start">
-                        <Image className="w-full" src={API_URL + img.photo.url} width={1920} height={1080} alt={img.photo.id} />
+                        <Image className="w-full" src={API_URL + img.photo.url} width={img.width} height={img.height} alt={img.photo.id} />
                     </div>
                 })}
             </div>

@@ -6,6 +6,7 @@ import { HiGiftTop } from "react-icons/hi2";
 import { LuPhoneCall } from "react-icons/lu";
 import { RiMessengerLine } from "react-icons/ri";
 import { SiZalo, SiTiktok } from "react-icons/si";
+import { FiFacebook } from "react-icons/fi";
 
 export default function Social() {
     const config = useWebConfigContext();
@@ -24,6 +25,15 @@ export default function Social() {
                 target="_blank"
             >
                 <LuPhoneCall size="23" />
+            </Link>
+            <Link
+                className="w-[36px] h-[36px] leading-[36px] rounded-[30px]
+            bg-[#202020] relative my-1 flex items-center justify-center text-[#ccc]
+            hover:text-[#0D92F4] hover:translate-y-[-4px] transition-all duration-300 ease"
+                href={config.facebook_url}
+                target="_blank"
+            >
+                <FiFacebook size="25" />
             </Link>
             <Link
                 className="w-[36px] h-[36px] leading-[36px] rounded-[30px]

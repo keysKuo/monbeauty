@@ -1,25 +1,16 @@
 // import Image from "next/image";
 import Heading from "./Heading";
-import Banner from "./Banner";
 import Image from 'next/image';
 
 import service1 from '@/public/nail-file.png';
 import service2 from '@/public/manicure.png';
 import service3 from '@/public/therapy.png';
-import { API_URL } from "@/constants";
 
 export default async function Services() {
-    const banners = await fetch(API_URL + '/api/banners?sort[0]=order:asc&filters[display][$eq]=true&populate[photo][fields][0]=url', { cache: 'no-store' })
-        .then(response => response.json())
-        .then(result => result.data)
+
 
     return (
         <section className="w-full mb-16">
-            <Heading title="Nổi bật" />
-            <div className="w-full bg-secondary mb-20">
-                <Banner images={banners} />
-            </div>
-
             <Heading title="Dịch vụ" />
             <div className="w-full py-6">
                 <div className="flex tablet:flex-row flex-col items-center justify-center gap-3">
